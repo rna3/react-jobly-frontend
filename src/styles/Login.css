@@ -1,0 +1,71 @@
+/* Login.css */
+
+/* Center the login form on the page */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto 20px auto; /* Centers content and accounts for navbar */
+    padding: 30px;
+    margin-top: 30px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  /* Login Title */
+  .login-container h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    margin-top: 0px;
+  }
+  
+  /* Login Form */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Input Fields */
+  .login-form input {
+    width: 100%; /* Ensures all inputs are the same width */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    box-sizing: border-box; /* Prevents padding from affecting width */
+  }
+  
+  .login-form input:focus {
+    border-color: #f39c12;
+  }
+  
+  /* Login Button */
+  .login-form button {
+    width: 100%; /* Matches input field width */
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    box-sizing: border-box; /* Ensures width remains consistent */
+  }
+  
+  .login-form button:hover {
+    background-color: #e67e22;
+  }
+  
+  /* Error Message */
+  .error-message {
+    font-size: 14px;
+    color: #e74c3c;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  

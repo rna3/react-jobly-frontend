@@ -1,0 +1,86 @@
+/* CompanyList.css */
+
+/* Center the company list page */
+.company-list-container {
+    max-width: 800px;
+    margin: 20px auto 20px auto;
+    padding: 20px;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  
+  /* Page Title */
+  .company-list-container h1 {
+    font-size: 32px;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Search Form */
+  .company-search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  /* Search Input */
+  .company-search-form input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    outline: none;
+    text-align: center; 
+  }
+  
+  .company-search-form input:focus {
+    border-color: #f39c12;
+  }
+  
+  /* Search Button */
+  .company-search-form button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .company-search-form button:hover {
+    background-color: #e67e22;
+  }
+  
+  /* Company List */
+  .company-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  /* No Companies Found Message */
+  .no-companies {
+    font-size: 18px;
+    color: #e74c3c;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Ensure the entire page content is centered */
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  

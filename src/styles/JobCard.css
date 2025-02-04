@@ -1,0 +1,73 @@
+/* Style for the job card container */
+.job-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    width: 100%;
+    max-width: 600px; /* Prevents overly wide cards */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Hover effect */
+  .job-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Job Title */
+  .job-card h3 {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  /* Company Link */
+  .job-card a {
+    text-decoration: none;
+    color: #2c3e50;
+    transition: color 0.3s ease-in-out;
+    font-weight: bold;
+  }
+  
+  .job-card a:hover {
+    color: #f39c12;
+  }
+  
+  /* Job Details */
+  .job-card p {
+    font-size: 16px;
+    color: #7f8c8d;
+    line-height: 1.4;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  /* Apply Button */
+  .job-card button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .job-card button:hover {
+    background-color: #219150;
+  }
+  
+  /* Disabled "Applied" Button */
+  .job-card button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }
+  

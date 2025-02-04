@@ -1,0 +1,109 @@
+/* Make navigation bar fixed at the top */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between; /* Ensures proper spacing */
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  /* Container for left-aligned Home link */
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Container for right-aligned links */
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 30px;
+  }
+  
+  /* Navigation List */
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Remove default list styling */
+  nav ul li {
+    list-style: none;
+  }
+  
+  /* Links */
+  nav a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  nav a:hover {
+    color: #f39c12;
+  }
+  
+  /* Active Link */
+  nav a.active {
+    color: #f39c12;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 3px;
+  }
+  
+  /* Logout Button */
+  nav button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  nav button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Ensure page content doesn't get hidden behind fixed navbar */
+  body {
+    padding-top: 60px;
+  }
+  
+  /* Responsive Navigation */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-left,
+    .nav-right {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .nav-right {
+      flex-direction: column;
+      gap: 10px;
+      padding-right: 0;
+    }
+  
+    nav a {
+      font-size: 16px;
+    }
+  }
+  

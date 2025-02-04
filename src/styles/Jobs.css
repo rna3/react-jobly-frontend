@@ -1,0 +1,78 @@
+/* Jobs.css */
+
+/* Center the job search page */
+.jobs-container {
+    max-width: 800px;
+    margin: 20px auto 20px auto; 
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Page Title */
+  .jobs-container h1 {
+    font-size: 32px;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+  }
+  
+  /* Search Form */
+  .job-search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  /* Search Input */
+  .job-search-form input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+  }
+  
+  .job-search-form input:focus {
+    border-color: #f39c12;
+  }
+  
+  /* Search Button */
+  .job-search-form button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .job-search-form button:hover {
+    background-color: #e67e22;
+  }
+  
+  /* Job List */
+  .job-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  /* No Jobs Found Message */
+  .no-jobs {
+    font-size: 18px;
+    color: #e74c3c;
+    font-weight: bold;
+    text-align: center;
+  }
+  

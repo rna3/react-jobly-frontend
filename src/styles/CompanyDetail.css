@@ -1,0 +1,50 @@
+/* CompanyDetail.css */
+
+/* Container for the company details page */
+.company-detail-container {
+    max-width: 800px;
+    margin: 20px auto 20px auto; 
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Company Name */
+  .company-detail-container h1 {
+    font-size: 32px;
+    color: #ecf0f1;
+    margin-bottom: 10px;
+  }
+  
+  /* Company Description */
+  .company-detail-container p {
+    font-size: 18px;
+    color: #7f8c8d;
+    line-height: 1.5;
+    max-width: 700px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Jobs Section */
+  .jobs-section {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Job Listing Header */
+  .jobs-section h2 {
+    font-size: 26px;
+    color: #ecf0f1;
+    margin-bottom: 15px;
+  }
+  
+  /* No Jobs Message */
+  .no-jobs {
+    font-size: 18px;
+    color: #e74c3c;
+    font-weight: bold;
+  }
+  

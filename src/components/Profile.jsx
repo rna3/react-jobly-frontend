@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import UserContext from "../UserContext";
+import "../styles/Profile.css";
 
 function Profile({ updateUserProfile }) {
   const { currentUser } = useContext(UserContext);
@@ -43,9 +44,9 @@ function Profile({ updateUserProfile }) {
   }
 
   return (
-    <div>
+    <div className="profile-container">
       <h2>Edit Profile</h2>
-      <form onSubmit={handleSubmit}>
+      <form className="profile-form" onSubmit={handleSubmit}>
         <label>Username (Cannot be changed)</label>
         <input name="username" value={formData.username} disabled />
 
@@ -65,13 +66,13 @@ function Profile({ updateUserProfile }) {
       </form>
 
       {errors.length > 0 && (
-        <div>
+        <div className="error-message">
           <p>Error updating profile:</p>
           <ul>{errors.map((err, idx) => <li key={idx}>{err}</li>)}</ul>
         </div>
       )}
 
-      {successMessage && <p>{successMessage}</p>}
+      {successMessage && <p className="success-message">{successMessage}</p>}
     </div>
   );
 }

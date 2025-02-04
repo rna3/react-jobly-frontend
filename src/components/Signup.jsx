@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../styles/Signup.css";
 
 function Signup({ signup }) {
   const [formData, setFormData] = useState({
@@ -34,9 +35,9 @@ function Signup({ signup }) {
   }
 
   return (
-    <div>
+    <div className="signup-container">
       <h2>Sign Up</h2>
-      <form onSubmit={handleSubmit}>
+      <form className="signup-form" onSubmit={handleSubmit}>
         <input
           name="username"
           placeholder="Username"
@@ -77,7 +78,7 @@ function Signup({ signup }) {
         <button type="submit">Sign Up</button>
       </form>
       {errors.length > 0 && (
-        <div>
+        <div className="error-message">
           <p>Errors:</p>
           <ul>
             {errors.map((error, idx) => (

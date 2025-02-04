@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import JoblyApi from '../api';
 import JobCard from './JobCard';
+import "../styles/Jobs.css"; 
 
 function Jobs() {
   // Two states: one for controlling the input and one for the actual search term.
@@ -28,9 +29,9 @@ function Jobs() {
   }
 
   return (
-    <div>
+    <div className="jobs-container">
       <h1>Jobs</h1>
-      <form onSubmit={handleSubmit}>
+      <form className="job-search-form" onSubmit={handleSubmit}>
         <input 
           type="text" 
           placeholder="Search for jobs..."
@@ -39,11 +40,11 @@ function Jobs() {
         />
         <button type="submit">Search</button>
       </form>
-      <div>
+      <div className="job-list">
         {jobs.length ? (
           jobs.map(job => <JobCard key={job.id} job={job} />)
         ) : (
-          <p>No jobs found.</p>
+          <p className="no-jobs">No jobs found.</p>
         )}
       </div>
     </div>

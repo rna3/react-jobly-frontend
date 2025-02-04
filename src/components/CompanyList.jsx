@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import JoblyApi from '../api';
 import CompanyCard from './CompanyCard';
+import "../styles/CompanyList.css";
 
 function CompanyList() {
   // This state controls the input field.
@@ -29,9 +30,9 @@ function CompanyList() {
   }
 
   return (
-    <div>
+    <div className="company-list-container">
       <h1>Companies</h1>
-      <form onSubmit={handleSubmit}>
+      <form className="company-search-form" onSubmit={handleSubmit}>
         <input 
           type="text" 
           placeholder="Search for companies..." 
@@ -40,13 +41,13 @@ function CompanyList() {
         />
         <button type="submit">Search</button>
       </form>
-      <div>
+      <div className="company-list">
         {companies.length > 0 ? (
           companies.map(company => (
             <CompanyCard key={company.handle} company={company} />
           ))
         ) : (
-          <p>No companies found.</p>
+          <p className="no-companies">No companies found.</p>
         )}
       </div>
     </div>
