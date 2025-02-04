@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import UserContext from "./UserContext";
 import "./styles/Navigation.css";
+
 function Navigation({ logout }) {
   const { currentUser } = useContext(UserContext);
 
@@ -9,23 +10,47 @@ function Navigation({ logout }) {
     <nav>
       {/* Left side - Home Link */}
       <div className="nav-left">
-        <NavLink to="/" activeClassName="active">Home</NavLink>
+        <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+          Home
+        </NavLink>
       </div>
 
       {/* Right side - All other Links */}
       <div className="nav-right">
         <ul>
-          <li><NavLink to="/companies" activeClassName="active">Companies</NavLink></li>
-          <li><NavLink to="/jobs" activeClassName="active">Jobs</NavLink></li>
+          <li>
+            <NavLink to="/companies" className={({ isActive }) => (isActive ? "active" : "")}>
+              Companies
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/jobs" className={({ isActive }) => (isActive ? "active" : "")}>
+              Jobs
+            </NavLink>
+          </li>
           {currentUser ? (
             <>
-              <li><NavLink to="/profile" activeClassName="active">{currentUser.username}</NavLink></li>
-              <li><button onClick={logout}>Logout</button></li>
+              <li>
+                <NavLink to="/profile" className={({ isActive }) => (isActive ? "active" : "")}>
+                  {currentUser.username}
+                </NavLink>
+              </li>
+              <li>
+                <button onClick={logout}>Logout</button>
+              </li>
             </>
           ) : (
             <>
-              <li><NavLink to="/login" activeClassName="active">Login</NavLink></li>
-              <li><NavLink to="/signup" activeClassName="active">Signup</NavLink></li>
+              <li>
+                <NavLink to="/login" className={({ isActive }) => (isActive ? "active" : "")}>
+                  Login
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/signup" className={({ isActive }) => (isActive ? "active" : "")}>
+                  Signup
+                </NavLink>
+              </li>
             </>
           )}
         </ul>
